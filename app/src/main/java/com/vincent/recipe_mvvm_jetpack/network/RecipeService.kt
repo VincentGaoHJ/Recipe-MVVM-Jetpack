@@ -7,6 +7,8 @@ import retrofit2.http.Header
 import retrofit2.http.Query
 
 interface RecipeService {
+
+    // suspend = coroutine function
     @GET("search")
     suspend fun search(
         @Header("Authorization") token:String,

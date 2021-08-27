@@ -3,6 +3,11 @@ package com.vincent.recipe_mvvm_jetpack.domain.model
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+/**
+ * Core Business Model
+ * See Recipe example: https://food2fork.ca/
+ * @Parcelize requires all serialized properties to be declared in the primary constructor.
+ */
 @Parcelize
 data class Recipe(
     val id: Int,

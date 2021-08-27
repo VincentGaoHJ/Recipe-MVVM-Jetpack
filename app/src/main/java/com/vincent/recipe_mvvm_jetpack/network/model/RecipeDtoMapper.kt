@@ -4,6 +4,9 @@ import com.vincent.recipe_mvvm_jetpack.domain.model.Recipe
 import com.vincent.recipe_mvvm_jetpack.domain.util.DomainMapper
 
 class RecipeDtoMapper : DomainMapper<RecipeDto, Recipe> {
+    /**
+     * Take a Network Entity(RecipeDto) as input and return a Domain(Recipe)
+     */
     override fun mapToDomainModel(model: RecipeDto): Recipe {
         return Recipe(
             id = model.pk,
@@ -18,6 +21,10 @@ class RecipeDtoMapper : DomainMapper<RecipeDto, Recipe> {
         )
     }
 
+    /**
+     * Take Domain(Recipe) as input and return a Network Entity(RecipeDto)
+     * It's not gonna be used if you don't publish something to the network
+     */
     override fun mapFromDomainModel(domainModel: Recipe): RecipeDto {
         return RecipeDto(
             pk = domainModel.id,
