@@ -3,8 +3,13 @@ package com.vincent.recipe_mvvm_jetpack.repository
 import com.vincent.recipe_mvvm_jetpack.domain.model.Recipe
 import com.vincent.recipe_mvvm_jetpack.network.RecipeService
 import com.vincent.recipe_mvvm_jetpack.network.model.RecipeDtoMapper
-import javax.inject.Inject
 
+/**
+ * Take parameters as function input
+ * Call retrofit to get results(Dto) from network
+ * Call function(toDomainList/mapToDomainModel) to transfer Dto to Domain
+ * Return Domain object as function output
+ */
 class RecipeRepositoryImpl(
     private val recipeService: RecipeService,
     private val mapper: RecipeDtoMapper
