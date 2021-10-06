@@ -19,16 +19,10 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var app: BaseApplication
 
-    @Inject
-    lateinit var someRandomString: String
-
     @ExperimentalComposeUiApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // val keyboardController = LocalSoftwareKeyboardController.current
-
-        Log.d(TAG, "onCreate: $someRandomString")
         Log.d(TAG, "onCreate: $app")
     }
 }
